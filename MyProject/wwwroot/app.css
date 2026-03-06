@@ -58,3 +58,112 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+/* #####################      BenchMark.razor      ######################*/
+.search-container {
+    display: flex;
+    gap: 8px;
+    margin : 24px 0;
+}
+
+.steam-input {
+    flex: 1;
+    padding: 10px 14px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #e2e8f0;
+    font-size: 14px;
+    outline: none;
+}
+
+.steam-input:focus {
+    border-color: #38bdf8;
+}
+
+.fetch-button {
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 6px;
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fetch-button:hover {
+    background: #7dd3fc;
+}
+
+
+.category-title {
+    margin-top: 24px;
+    color: #8515cf;
+}
+
+.scenario-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background: #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #334155;
+    width: 80%;
+    margin: 0 auto 50px auto;
+}
+
+.scenario-table thead tr {
+    background: #334155;
+}
+
+.scenario-table th {
+    padding: 12px 16px;
+    text-align: left;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.scenario-table td {
+    padding: 12px 16px;
+    color: #e2e8f0;
+    border-top: 1px solid #334155;
+    font-family: monospace;
+}
+
+.scenario-table td.score {
+    text-align: right;
+    color: #38bdf8;
+}
+
+.scenario-table td.rank {
+    text-align: right;
+    color: #94a3b8;
+}
+
+.scenario-table th,
+.scenario-table td {
+    text-align: center !important;
+    padding: 6px 8px;
+    border: 1px solid #334155;
+}
+
+.scenario-table th:nth-child(1),
+.scenario-table td:nth-child(1) {
+    width: 60%;
+}
+
+.scenario-table th:nth-child(2),
+.scenario-table td:nth-child(2) {
+    width: 20%;
+}
+
+.scenario-table th:nth-child(3),
+.scenario-table td:nth-child(3) {
+    width: 20%;
+}
+
+
+
+/* #####################      BenchMark.razor      ######################*/

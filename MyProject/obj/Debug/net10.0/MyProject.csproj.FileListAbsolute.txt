@@ -24,7 +24,6 @@
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/scopedcss/Components/Layout/ReconnectModal.razor.rz.scp.css
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/scopedcss/bundle/MyProject.styles.css
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/scopedcss/projectbundle/MyProject.bundle.scp.css
-/home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/compressed/qtajquiib6-{0}-w7mf952350-w7mf952350.gz
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/compressed/9t64iuvkii-{0}-bqjiyaj88i-bqjiyaj88i.gz
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/compressed/f5hbr5mlhp-{0}-c2jlpeoesf-c2jlpeoesf.gz
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/compressed/mejudsvgj9-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -84,3 +83,4 @@
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/MyProject.pdb
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/MyProject.genruntimeconfig.cache
 /home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/ref/MyProject.dll
+/home/kenta/Program/MyProject/MyProject/obj/Debug/net10.0/compressed/qtajquiib6-{0}-pa24o3runq-pa24o3runq.gz
