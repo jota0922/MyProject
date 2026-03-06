@@ -1,4 +1,7 @@
+using System.Text.Json.Serialization;
+
 public class BenchmarkResponse
+
 {
     [JsonPropertyName("benchmark_progress")]
     public double BenchmarkProgress { get; set; }
