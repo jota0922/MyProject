@@ -1,0 +1,75 @@
+@page "/benchmark"
+@inject HttpClient Http
+@using System.Text.Json
+
+<h3>Legion 滑 - Benchmark Score Viewer</h3>
+
+<input @bind="steamId" placeholder="SteamIDを入力" />
+<button @onclick="FetchScores">取得</button>
+
+@if (isLoading)
+{
+    <p>読み込み中...</p>
+}
+@if (errorMessage != null)
+{
+    <p style="color:red;">@errorMessage</p>
+}
+@if (result != null)
+{
+    <p>Overall Rank: @result.OverallRank</p>
+    <p>Benchmark Progress: @result.BenchmarkProgress</p>
+
+    @foreach (var category in result.Categories)
+    {
+        <h4>@category.Key</h4>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>シナリオ名</th>
+                    <th>スコア</th>
+                    <th>リーダーボードランク</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var scenario in category.Value.Scenarios)
+                {
+                    <tr>
+                        <td>@scenario.Key</td>
+                        <td>@scenario.Value.Score</td>
+                        <td>@(scenario.Value.LeaderboardRank?.ToString() ?? "-")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+
+@code {
+    private string steamId = string.Empty;
+    private BenchmarkResponse? result;
+    private bool isLoading = false;
+    private string? errorMessage;
+    private const int BenchmarkId = 711;
+
+    private async Task FetchScores()
+    {
+        isLoading = true;
+        errorMessage = null;
+        result = null;
+        try
+        {
+            var url = $"https://kovaaks.com/webapp-backend/benchmarks/player-progress-rank-benchmark?benchmarkId={BenchmarkId}&steamId={steamId}";
+            var json = await Http.GetStringAsync(url);
+            result = JsonSerializer.Deserialize<BenchmarkResponse>(json);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"取得に失敗しました: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
